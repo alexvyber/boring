@@ -48,16 +48,16 @@ mainbox {
 }
 
 listview {
-    columns: 5;
+    columns: 6;
     layout: vertical;
-    spacing: 100;
+    spacing: 75;
     margin: 3% 5%;
 }
 
 element {
     orientation: vertical;
     padding: 2% 0;
-    border-radius: 6;
+    border-radius: 10;
 }
 
 element normal.urgent, element alternate.urgent {

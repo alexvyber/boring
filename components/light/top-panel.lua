@@ -53,7 +53,7 @@ top_panel.create = function(s)
          -- wibox.layout.margin(require("widgets.layout-box"), dpi(2), dpi(2), dpi(2), dpi(2))
       },
       layout = wibox.layout.align.horizontal,
-      require("widgets.calendar").create(s),
+      -- require("widgets.calendar").create(s),
    }
 
 

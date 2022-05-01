@@ -36,7 +36,7 @@ calendar.create = function(screen)
       mode = "outside",
       align = "right",
       timer_function = function()
-         return os.date("The date today is %B %d, %Y.")
+         return os.date("%B %d, %Y")
       end,
       preferred_positions = {"right", "left", "top", "bottom"},
       margin_leftright = dpi(8),
@@ -44,7 +44,7 @@ calendar.create = function(screen)
    })
 
    local cal_shape = function(cr, width, height)
-      gears.shape.partially_rounded_rect(cr, width, height, false, false, true, true, 15)
+      gears.shape.partially_rounded_rect(cr, width, height, false, false, false, false, 15)
    end
 
    -- Calendar Widget
@@ -55,11 +55,11 @@ calendar.create = function(screen)
       font = beautiful.title_font,
       long_weekdays = true,
       margin = 0, -- 10
-      style_month = {border_width = 0, padding = 12, shape = cal_shape, padding = 25},
-      style_header = {border_width = 0, bg_color = "#00000000"},
-      style_weekday = {border_width = 0, bg_color = "#00000000"},
-      style_normal = {border_width = 0, bg_color = "#00000000"},
-      style_focus = {border_width = 0, bg_color = "#8AB4F8"},
+      style_month = {border_width = 0,  bg_color = "#101010", shape = cal_shape, padding = 25},
+      style_header = {border_width = 0, padding = 10, bg_color = "#202020", fg_color = "#fff"},
+      style_weekday = {border_width = 0, padding = 10, bg_color = "#202020", fg_color="#eee" },
+      style_normal = {border_width = 0},
+      style_focus = {border_width = 0, bg_color = "#555"},
    })
 
    -- Attach calentar to clock_widget

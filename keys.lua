@@ -274,20 +274,25 @@ keys.globalkeys = gears.table.join(
 
    -- Change Theme
    awful.key({modkey}, "t",
-
-
-
       function()
-         -- emit signal to show the exit screen
-         -- awesome.emit_signal("show_exit_screen")
-      awful.spawn.with_shell("sleep 1; echo foo >> ~/tmp/foo.txt")
-      awful.spawn.with_shell("cp ~/.config/awesome/theme.lua ~/.config/awesome/themey.lua")
+      -- Change awesome theme
+      -- nvim takes dark or light bg from this file too
+      awful.spawn.with_shell("cp ~/.config/awesome/theme.lua ~/.config/awesome/tmp.lua")
       awful.spawn.with_shell("cp ~/.config/awesome/themex.lua ~/.config/awesome/theme.lua")
-      awful.spawn.with_shell("cp ~/.config/awesome/themey.lua ~/.config/awesome/themex.lua")
+      awful.spawn.with_shell("mv ~/.config/awesome/tmp.lua ~/.config/awesome/themex.lua")
+
+      -- Change kitty theme
+      awful.spawn.with_shell("cp ~/.config/kitty/theme.conf ~/.config/kitty/themey.conf")
+      awful.spawn.with_shell("cp ~/.config/kitty/themex.conf ~/.config/kitty/theme.conf")
+      awful.spawn.with_shell("mv ~/.config/kitty/themey.conf ~/.config/kitty/themex.conf")
+
+      -- Change tmux theme
+      awful.spawn.with_shell("cp ~/.tmux.theme.conf ~/.tmux.tmp")
+      awful.spawn.with_shell("cp ~/.tmux.sw ~/.tmux.theme.conf")
+      awful.spawn.with_shell("mv ~/.tmux.tmp ~/.tmux.sw")
+
       awesome.restart()
       end,
-
-
       {description = "change theme", group = "awesome"}
    ),
 
