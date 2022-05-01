@@ -23,7 +23,7 @@ local theme = {}
 -- ===================================================================
 
 
-theme.name = "pastel"
+theme.name = "light"
 
 -- Font
 theme.font = "Work Sans 10"
