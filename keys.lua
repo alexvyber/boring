@@ -275,21 +275,31 @@ keys.globalkeys = gears.table.join(
    -- Change Theme
    awful.key({modkey}, "t",
       function()
+      
+      local local_theme = require("theme")
+
+      if local_theme == "dark" then
+      awful.spawn.with_shell("echo 'return \"light\"' > ~/.config/awesome/theme.lua")
+      local_theme = "light"
+      else
+      local_theme = "dark"
+      awful.spawn.with_shell("echo 'return \"dark\"'  > ~/.config/awesome/theme.lua")
+      end
+
+
       -- Change awesome theme
       -- nvim takes dark or light bg from this file too
-      awful.spawn.with_shell("cp ~/.config/awesome/theme.lua ~/.config/awesome/tmp.lua")
-      awful.spawn.with_shell("cp ~/.config/awesome/themex.lua ~/.config/awesome/theme.lua")
-      awful.spawn.with_shell("mv ~/.config/awesome/tmp.lua ~/.config/awesome/themex.lua")
 
       -- Change kitty theme
-      awful.spawn.with_shell("cp ~/.config/kitty/theme.conf ~/.config/kitty/themey.conf")
-      awful.spawn.with_shell("cp ~/.config/kitty/themex.conf ~/.config/kitty/theme.conf")
-      awful.spawn.with_shell("mv ~/.config/kitty/themey.conf ~/.config/kitty/themex.conf")
+      awful.spawn.with_shell("ln -sf  ~/.config/kitty/kitty-themes/themes/" .. local_theme .. ".conf ~/.config/kitty/theme.conf ")
+      -- awful.spawn.with_shell("cp ~/.config/kitty/themex.conf ~/.config/kitty/theme.conf")
+      -- awful.spawn.with_shell("mv ~/.config/kitty/themey.conf ~/.config/kitty/themex.conf")
 
       -- Change tmux theme
-      awful.spawn.with_shell("cp ~/.tmux.theme.conf ~/.tmux.tmp")
-      awful.spawn.with_shell("cp ~/.tmux.sw ~/.tmux.theme.conf")
-      awful.spawn.with_shell("mv ~/.tmux.tmp ~/.tmux.sw")
+      awful.spawn.with_shell("ln -sf  ~/dotfiles/dot/dot-tmux." .. local_theme .. ".conf ~/.tmux.theme.conf ")
+      -- awful.spawn.with_shell("cp ~/.tmux.theme.conf ~/.tmux.tmp")
+      -- awful.spawn.with_shell("cp ~/.tmux.sw ~/.tmux.theme.conf")
+      -- awful.spawn.with_shell("mv ~/.tmux.tmp ~/.tmux.sw")
 
       awesome.restart()
       end,
