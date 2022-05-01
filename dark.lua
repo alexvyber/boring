@@ -16,6 +16,7 @@ local gears = require("gears")
 
 local pastel = {}
 
+local theme = require("theme")
 
 -- ===================================================================
 -- Pastel setup
@@ -25,20 +26,20 @@ local pastel = {}
 pastel.initialize = function()
 
    -- Import components
-   require("components.pastel.wallpaper")
+   require("components." ..  theme ..  ".wallpaper")
    require("components.exit-screen")
    require("components.volume-adjust")
 
    -- Import panels
-   local left_panel = require("components.pastel.left-panel")
-   local top_panel = require("components.pastel.top-panel")
+   local left_panel = require("components." .. theme ..  ".left-panel")
+   local top_panel = require("components." .. theme .. ".top-panel")
 
    -- Set up each screen (add tags & panels)
    awful.screen.connect_for_each_screen(function(s)
       for i = 1, 14, 1
       do
          awful.tag.add(i, {
-            icon = gears.filesystem.get_configuration_dir() .. "/icons/tags/pastel/" .. i .. ".png",
+            icon = gears.filesystem.get_configuration_dir() .. "/icons/tags/" .. theme ..  "/"  .. i .. ".png",
             icon_only = true,
             layout = awful.layout.suit.tile,
             screen = s,

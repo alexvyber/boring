@@ -1,4 +1,5 @@
 return {
+    postman = {rule = {instance = "postman"}, properties = {tag = "2"}},
     brave = {rule = {instance = "brave-browser"}, properties = {tag = "4"}},
     firefox = { rule = { class = 'firefox' }, properties = { tag = "6" }},
     vivaldi = {rule = {instance = "vivaldi"}, properties = {tag = "5"}},

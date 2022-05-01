@@ -19,8 +19,9 @@ local awful = require("awful")
 
 
 -- change this number to use the corresponding theme
-local theme = "pastel"
-local theme_config_dir = gears.filesystem.get_configuration_dir() .. "/configuration/" .. theme .. "/"
+-- local theme = "light"
+local theme = require('theme')
+local theme_config_dir = gears.filesystem.get_configuration_dir() .. "/configs/" .. theme .. "/"
 
 -- define default apps (global variable so other components can access it)
 apps = {
@@ -73,7 +74,7 @@ end
 
 -- Import theme
 local beautiful = require("beautiful")
-beautiful.init(gears.filesystem.get_configuration_dir() .. "themes/" .. theme .. "-theme.lua")
+beautiful.init(gears.filesystem.get_configuration_dir() .. "themes/" .. theme .. ".lua")
 
 -- Initialize theme
 local selected_theme = require(theme)

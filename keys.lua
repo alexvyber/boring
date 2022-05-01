@@ -139,14 +139,6 @@ keys.globalkeys = gears.table.join(
    -- SPAWN APPLICATION KEY BINDINGS
    -- =========================================
 
-   -- Spawn alternative terminal
-   awful.key({modkey, "Shift"}, "Return",
-      function()
-         awful.spawn(apps.terminal)
-      end,
-      {description = "open a terminal", group = "launcher"}
-   ),
-
    -- Spawn Vivaldi
    awful.key({modkey}, "v",
       function()
@@ -165,6 +157,14 @@ keys.globalkeys = gears.table.join(
 
    -- Spawn terminal
    awful.key({modkey}, "Return",
+      function()
+         awful.spawn(apps.terminal)
+      end,
+      {description = "open a terminal", group = "launcher"}
+   ),
+
+   -- Spawn alternative terminal
+   awful.key({modkey, "Shift"}, "Return",
       function()
          awful.spawn(apps.altterminal)
       end,
@@ -271,12 +271,36 @@ keys.globalkeys = gears.table.join(
       {description = "reload awesome", group = "awesome"}
    ),
 
+
+   -- Change Theme
+   awful.key({modkey}, "t",
+
+
+
+      function()
+         -- emit signal to show the exit screen
+         -- awesome.emit_signal("show_exit_screen")
+      awful.spawn.with_shell("sleep 1; echo foo >> ~/tmp/foo.txt")
+      awful.spawn.with_shell("cp ~/.config/awesome/theme.lua ~/.config/awesome/themey.lua")
+      awful.spawn.with_shell("cp ~/.config/awesome/themex.lua ~/.config/awesome/theme.lua")
+      awful.spawn.with_shell("cp ~/.config/awesome/themey.lua ~/.config/awesome/themex.lua")
+      awesome.restart()
+      end,
+
+
+      {description = "change theme", group = "awesome"}
+   ),
+
+
+
    -- Quit Awesome
    awful.key({modkey}, "Escape",
+
       function()
          -- emit signal to show the exit screen
          awesome.emit_signal("show_exit_screen")
       end,
+
       {description = "toggle exit screen", group = "hotkeys"}
    ),
 

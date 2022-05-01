@@ -15,6 +15,8 @@ local awful = require("awful")
 local gears = require("gears")
 local naughty = require("naughty")
 
+local themeColor = require("theme")
+local theme = require("colors")[themeColor]
 
 -- ===================================================================
 -- Initialization
@@ -24,14 +26,14 @@ local naughty = require("naughty")
 local is_blurred = false;
 
 local wallpaper_dir = gears.filesystem.get_configuration_dir() .. "/wallpaper"
-local wallpaper = wallpaper_dir .. "/wallpaper.jpg"
+local wallpaper = wallpaper_dir .. "/wallpaper-".. themeColor  ..  ".jpg"
 -- local wallpaper = "/home/alexs/Pictures/SAM_80841.jpg"
 local blurred_wallpaper = wallpaper -- wallpaper_dir .. "/blurredWallpaper.png"
 -- local wallpaper = "/home/alexs/Pictures/bg2.jpg"
 -- local blurred_wallpaper =  "/home/alexs/Pictures/bg2.jpg"
 
 awful.spawn.with_shell("feh --bg-fill " .. wallpaper)
--- gears.wallpaper.set("#ff0000")
+-- gears.wallpaper.set(theme.bg_color)
 
 --- Check if a file or directory exists in this path
 local function exists(file)
