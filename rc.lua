@@ -142,13 +142,10 @@ end)
 -- Reload config when screen geometry changes
 screen.connect_signal("property::geometry", awesome.restart)
 
--- gears.wallpaper.set("#ebebeb")
-
 
 -- ===================================================================
 -- Garbage collection (allows for lower memory consumption)
 -- ===================================================================
-
 
 
 collectgarbage("setpause", 110)

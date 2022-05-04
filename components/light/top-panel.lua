@@ -1,16 +1,4 @@
 
---      ████████╗ ██████╗ ██████╗     ██████╗  █████╗ ███╗   ██╗███████╗██╗
---      ╚══██╔══╝██╔═══██╗██╔══██╗    ██╔══██╗██╔══██╗████╗  ██║██╔════╝██║
---         ██║   ██║   ██║██████╔╝    ██████╔╝███████║██╔██╗ ██║█████╗  ██║
---         ██║   ██║   ██║██╔═══╝     ██╔═══╝ ██╔══██║██║╚██╗██║██╔══╝  ██║
---         ██║   ╚██████╔╝██║         ██║     ██║  ██║██║ ╚████║███████╗███████╗
---         ╚═╝    ╚═════╝ ╚═╝         ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚══════╝
-
--- ===================================================================
--- Initialization
--- ===================================================================
-
-
 local awful = require("awful")
 local beautiful = require("beautiful")
 local wibox = require("wibox")
@@ -42,7 +30,6 @@ top_panel.create = function(s)
 
    panel:setup {
       expand = "none",
-      task_list.create(s),
       layout = wibox.layout.align.horizontal,
       {
          layout = wibox.layout.fixed.horizontal,
@@ -53,6 +40,7 @@ top_panel.create = function(s)
          volume_widget {widget_type = 'vertical_bar', device = 'default', bg_color = '#ffffff00',main_color = '#ffffff00'}
          -- wibox.layout.margin(require("widgets.layout-box"), dpi(2), dpi(2), dpi(2), dpi(2))
       },
+      task_list.create(s),
       require("widgets.calendar").create(s),
    }
 

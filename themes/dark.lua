@@ -30,7 +30,7 @@ theme.font = "Work Sans 10"
 theme.title_font =  "Work Sans Medium 10"
 
 -- Background
-theme.bg_normal = "#101010"
+theme.bg_normal = "#10101000"
 theme.bg_dark = "#000000"
 theme.bg_focus = "#ffffff50"
 theme.bg_urgent = "#f00"
