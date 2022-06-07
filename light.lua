@@ -2,6 +2,8 @@
 local awful = require("awful")
 local gears = require("gears")
 
+local isLeftPanel = require("user_configs")
+
 local pastel = {}
 
 local theme = require("theme")
@@ -36,7 +38,11 @@ pastel.initialize = function()
 
       -- Only add the left panel on the primary screen
       if s.index == 1 then
-         -- left_panel.create(s)
+        if isLeftPanel then
+         left_panel.create(s)
+       else 
+         -- nothing
+       end
       end
 
       -- Add the top panel to every screen

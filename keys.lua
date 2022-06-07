@@ -272,6 +272,23 @@ keys.globalkeys = gears.table.join(
    ),
 
 
+   -- Toggle left panel
+   awful.key({modkey}, "i",
+      function()
+        local panel_state = require("user_configs")
+
+        if panel_state then
+        awful.spawn.with_shell("echo 'return false' > ~/.config/awesome/user_configs.lua")
+      else
+        awful.spawn.with_shell("echo 'return true' > ~/.config/awesome/user_configs.lua")
+      end
+
+      awesome.restart()
+      end,
+      {description = "toggle left panel", group = "awesome"}
+   ),
+
+
    -- Change Theme
    awful.key({modkey}, "t",
       function()
