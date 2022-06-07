@@ -36,7 +36,7 @@ pastel.initialize = function()
 
       -- Only add the left panel on the primary screen
       if s.index == 1 then
-         left_panel.create(s)
+         -- left_panel.create(s)
       end
 
       -- Add the top panel to every screen
