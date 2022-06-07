@@ -12,7 +12,7 @@
 local awful = require('awful')
 local wibox = require('wibox')
 local gears = require('gears')
-local naughty = require('naughty') 
+local naughty = require('naughty')
 local dpi = require('beautiful').xresources.apply_dpi
 local clickable_container = require('widgets.clickable-container')
 
@@ -33,7 +33,7 @@ local return_button = function()
 	local widget = wibox.widget {
 		{
 			id = 'icon',
-			image = widget_icon_dir .. 'loading.svg',
+			image = widget_icon_dir .. 'loading.png',
 			widget = wibox.widget.imagebox,
 			resize = true
 		},
@@ -48,7 +48,7 @@ local return_button = function()
 		},
 		widget = clickable_container
 	}
-	
+
 	widget_button:buttons(
 		gears.table.join(
 			awful.button({}, 1, nil,
@@ -122,7 +122,7 @@ local return_button = function()
 			local message = 'You are now connected to <b>\"' .. essid .. '\"</b>'
 			local title = 'Connection Established'
 			local app_name = 'System Notification'
-			local icon = widget_icon_dir .. 'connected_notification.svg'
+			local icon = widget_icon_dir .. 'connected_notification.png'
 			network_notify(message, title, app_name, icon)
 		end
 
@@ -139,7 +139,7 @@ local return_button = function()
 						'</b>\nWireless Interface: <b>' .. network_interfaces.wlan ..
 						'</b>\nWiFi-Strength: <b>' .. tostring(wifi_strength) .. '%' ..
 						'</b>\nBit rate: <b>' .. tostring(bitrate) .. '</b>'
-					
+
 					if healthy then
 						update_tooltip(message)
 					else
@@ -170,11 +170,11 @@ local return_button = function()
 						widget_icon_name = widget_icon_name .. '-' .. tostring(strength) .. '-alert'
 						update_wireless_data(wifi_strength_rounded, false)
 					end
-					widget.icon:set_image(widget_icon_dir .. widget_icon_name .. '.svg')
+					widget.icon:set_image(widget_icon_dir .. widget_icon_name .. '.png')
 				end
 			)
 		end
-		
+
 		-- Get wifi strength
 		local update_wireless_strength = function()
 			awful.spawn.easy_async_with_shell(
@@ -204,7 +204,7 @@ local return_button = function()
 			local message = 'Connected to internet with <b>\"' .. network_interfaces.lan .. '\"</b>'
 			local title = 'Connection Established'
 			local app_name = 'System Notification'
-			local icon = widget_icon_dir .. 'wired.svg'
+			local icon = widget_icon_dir .. 'wired.png'
 			network_notify(message, title, app_name, icon)
 		end
 
@@ -213,7 +213,7 @@ local return_button = function()
 			function(stdout)
 
 				local widget_icon_name = 'wired'
-				
+
 				if stdout:match('Connected but no internet') then
 					widget_icon_name = widget_icon_name .. '-alert'
 					update_tooltip(
@@ -229,7 +229,7 @@ local return_button = function()
 					end
 					update_reconnect_startup(false)
 				end
-				widget.icon:set_image(widget_icon_dir .. widget_icon_name .. '.svg')
+				widget.icon:set_image(widget_icon_dir .. widget_icon_name .. '.png')
 			end
 		)
 	end
@@ -240,7 +240,7 @@ local return_button = function()
 			local message = 'Wi-Fi network has been disconnected'
 			local title = 'Connection Disconnected'
 			local app_name = 'System Notification'
-			local icon = widget_icon_dir .. 'wifi-strength-off.svg'
+			local icon = widget_icon_dir .. 'wifi-strength-off.png'
 			network_notify(message, title, app_name, icon)
 		end
 
@@ -248,7 +248,7 @@ local return_button = function()
 			local message = 'Ethernet network has been disconnected'
 			local title = 'Connection Disconnected'
 			local app_name = 'System Notification'
-			local icon = widget_icon_dir .. 'wired-off.svg'
+			local icon = widget_icon_dir .. 'wired-off.png'
 			network_notify(message, title, app_name, icon)
 		end
 
@@ -268,7 +268,7 @@ local return_button = function()
 			end
 		end
 		update_tooltip('Network is currently disconnected')
-		widget.icon:set_image(widget_icon_dir .. widget_icon_name .. '.svg')
+		widget.icon:set_image(widget_icon_dir .. widget_icon_name .. '.png')
 	end
 
 	local check_network_mode = function()
@@ -338,7 +338,7 @@ local return_button = function()
 		call_now = true,
 		callback = function()
 			check_network_mode()
-		end	
+		end
 	}
 
 	return widget_button

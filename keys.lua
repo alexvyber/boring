@@ -275,7 +275,7 @@ keys.globalkeys = gears.table.join(
    -- Change Theme
    awful.key({modkey}, "t",
       function()
-      
+
       local local_theme = require("theme")
 
       if local_theme == "dark" then
@@ -732,6 +732,30 @@ keys.globalkeys = gears.table.join(
          function()
             if client.focus then
                local tag = client.focus.screen.tags[1]
+               if tag then
+                  client.focus:move_to_tag(tag)
+               end
+            end
+         end,
+         {description = "move focused client to tag #".. 1, group = "tag"}
+         )
+)
+
+keys.globalkeys = gears.table.join(
+   keys.globalkeys, -- View tag only.
+   awful.key({modkey}, "#" .. 26,
+      function()
+         local screen = awful.screen.focused()
+         local tag = screen.tags[15]
+         if tag then tag:view_only() end
+   end, {description = "view tag #" .. 14, group = "tag"}),
+
+
+      -- Move client to tag
+      awful.key({modkey, "Shift"}, "#" .. 26,
+         function()
+            if client.focus then
+               local tag = client.focus.screen.tags[15]
                if tag then
                   client.focus:move_to_tag(tag)
                end

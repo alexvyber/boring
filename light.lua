@@ -23,7 +23,7 @@ pastel.initialize = function()
 
    -- Set up each screen (add tags & panels)
    awful.screen.connect_for_each_screen(function(s)
-      for i = 1, 14, 1
+      for i = 1, 15, 1
       do
          awful.tag.add(i, {
             icon = gears.filesystem.get_configuration_dir() .. "/icons/tags/" .. theme ..  "/"  .. i .. ".png",
@@ -40,7 +40,7 @@ pastel.initialize = function()
       end
 
       -- Add the top panel to every screen
-      top_panel.create(s)
+      -- top_panel.create(s)
 
    end)
 end

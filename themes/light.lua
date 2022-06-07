@@ -23,7 +23,7 @@ theme.title_font =  "Work Sans Medium 10"
 theme.bg_normal = "#efefef00"
 -- theme.bg_normal = "#f00"
 theme.bg_dark = "#000000"
-theme.bg_focus = "#ffffff"
+theme.bg_focus = "#d4f0ff"
 theme.bg_urgent = "#858585"
 theme.bg_minimize = "#bcbcbc"
 
@@ -47,7 +47,7 @@ theme.border_marked = theme.fg_urgent
 
 -- Taglist
 theme.taglist_bg_empty = theme.bg_normal
-theme.taglist_bg_occupied = "#00000010"
+theme.taglist_bg_occupied = "#0000000e"
 theme.taglist_bg_urgent = "#c5c5c5"
 theme.taglist_bg_focus = theme.bg_focus
 

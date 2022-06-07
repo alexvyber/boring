@@ -25,7 +25,7 @@ top_panel.create = function(s)
       position = "bottom",
       ontop = true,
       height = beautiful.top_panel_height,
-      width = s.geometry.width - 100,
+      width = s.geometry.width - 20,
    })
 
    panel:setup {
@@ -34,10 +34,10 @@ top_panel.create = function(s)
       {
          layout = wibox.layout.fixed.horizontal,
          -- wibox.layout.margin(wibox.widget.systray(), dpi(5), dpi(5), dpi(5), dpi(5)),
-         -- require("widgets.bluetooth"),
-         -- require("widgets.network")(),
+         require("widgets.bluetooth"),
+         require("widgets.network")(),
          -- require("widgets.battery"),
-         volume_widget {widget_type = 'vertical_bar', device = 'default', bg_color = '#ffffff00',main_color = '#ffffff00'}
+         volume_widget {widget_type = 'vertical_bar', device = 'default', bg_color = '#44444400',main_color = '#888'}
          -- wibox.layout.margin(require("widgets.layout-box"), dpi(2), dpi(2), dpi(2), dpi(2))
       },
       task_list.create(s),
