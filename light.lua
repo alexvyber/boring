@@ -46,7 +46,12 @@ pastel.initialize = function()
       end
 
       -- Add the top panel to every screen
-      -- top_panel.create(s)
+      if isLeftPanel then 
+      top_panel.create(s)
+    else
+      -- nothing
+
+    end
 
    end)
 end
