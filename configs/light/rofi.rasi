@@ -51,13 +51,13 @@ listview {
     columns: 5;
     layout: vertical;
     spacing: 100;
-    margin: 3% 5%;
+    margin: 5% 3%;
 }
 
 element {
     orientation: vertical;
-    padding: 2% 0;
-    border-radius: 6;
+    padding: 3% 1%;
+    border-radius: 10;
 }
 
 element normal.urgent, element alternate.urgent {
@@ -84,7 +84,7 @@ element selected.active {
 }
 
 element-icon {
-    size: 6%;
+    size: 7%;
 }
 
 element-text {
