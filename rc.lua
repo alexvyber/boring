@@ -35,6 +35,7 @@ apps = {
    filebrowser = "dolphin",
    vivaldi = "vivaldi",
    brave = "brave-browser",
+   chromium = "chromium-browser",
    edge="microsoft-edge-stable"
 }
 

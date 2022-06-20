@@ -147,6 +147,14 @@ keys.globalkeys = gears.table.join(
       {description = "open a terminal", group = "launcher"}
    ),
 
+   -- Spawn Chromium Browser
+   awful.key({modkey}, "c",
+      function()
+         awful.spawn(apps.chromium)
+      end,
+      {description = "open a terminal", group = "launcher"}
+   ),
+
    -- Spawn Brave Browser
    awful.key({modkey}, "b",
       function()
