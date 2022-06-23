@@ -166,7 +166,7 @@ keys.globalkeys = gears.table.join(
    -- Spawn terminal
    awful.key({modkey}, "Return",
       function()
-         awful.spawn(apps.terminal)
+         awful.spawn(apps.altterminal)
       end,
       {description = "open a terminal", group = "launcher"}
    ),
@@ -174,7 +174,7 @@ keys.globalkeys = gears.table.join(
    -- Spawn alternative terminal
    awful.key({modkey, "Shift"}, "Return",
       function()
-         awful.spawn(apps.altterminal)
+         awful.spawn(apps.terminal)
       end,
       {description = "open a terminal", group = "launcher"}
    ),
