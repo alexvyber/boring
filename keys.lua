@@ -422,15 +422,30 @@ keys.globalkeys = gears.table.join(
       {description = "focus right", group = "client"}
    ),
 
-   -- Focus client by index (cycle through clients)
+   -- TODO: blalalalal
    awful.key({modkey}, "Tab",
+      function()
+          awful.tag.viewnext()
+      end,
+      {description = "focus next by index", group = "client"}
+   ),
+
+   awful.key({modkey, "Shift"}, "Tab",
+      function()
+          awful.tag.viewprev()
+      end,
+      {description = "focus previous by index", group = "client"}
+   ),
+
+   -- Focus client by index (cycle through clients)
+   awful.key({"Mod1"}, "Tab",
       function()
          awful.client.focus.byidx(1)
       end,
       {description = "focus next by index", group = "client"}
    ),
 
-   awful.key({modkey, "Shift"}, "Tab",
+   awful.key({"Mod1", "Shift"}, "Tab",
       function()
          awful.client.focus.byidx(-1)
       end,
