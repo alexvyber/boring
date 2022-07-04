@@ -36,7 +36,8 @@ apps = {
    vivaldi = "vivaldi",
    brave = "brave-browser",
    chromium = "chromium-browser",
-   edge="microsoft-edge-stable"
+   edge="microsoft-edge-stable",
+   tg="telegram-desktop"
 }
 
 -- define wireless and ethernet interface names for the network widget
@@ -143,6 +144,8 @@ end)
 -- Reload config when screen geometry changes
 screen.connect_signal("property::geometry", awesome.restart)
 
+-- HACK: REally stupid hack
+awful.spawn('telegram-desktop')
 
 -- ===================================================================
 -- Garbage collection (allows for lower memory consumption)

@@ -5,11 +5,12 @@ local apps_to_start = {
  "vivaldi",
  "chromium-browser",
  "firefox",
- "microsoft-edge-dev",
- "qbittorrent",
+ -- "microsoft-edge-dev",
+"tg",
+"qbittorrent",
  -- "nautilus",
- -- "blueman-manager",
- "dolphin",
+"blueman-manager",
+"dolphin",
 }
 
 function start_apps (apps_to_start)
