@@ -138,9 +138,6 @@ end)
 -- Reload config when screen geometry changes
 screen.connect_signal("property::geometry", awesome.restart)
 
--- HACK: REally stupid hack
-awful.spawn("telegram-desktop")
-
 -- ===================================================================
 -- Garbage collection (allows for lower memory consumption)
 -- ===================================================================
