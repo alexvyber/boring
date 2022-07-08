@@ -1,4 +1,3 @@
-
 --      ████████╗██╗  ██╗███████╗███╗   ███╗███████╗
 --      ╚══██╔══╝██║  ██║██╔════╝████╗ ████║██╔════╝
 --         ██║   ███████║█████╗  ██╔████╔██║█████╗
@@ -10,24 +9,21 @@
 -- Initialization
 -- ===================================================================
 
-
 local xresources = require("beautiful.xresources")
 local dpi = xresources.apply_dpi
 
 -- define module table
 local theme = {}
 
-
 -- ===================================================================
 -- Theme Variables
 -- ===================================================================
-
 
 theme.name = "dark"
 
 -- Font
 theme.font = "Work Sans 10"
-theme.title_font =  "Work Sans Medium 10"
+theme.title_font = "Work Sans Medium 10"
 
 -- Background
 theme.bg_normal = "#10101000"
@@ -57,14 +53,14 @@ theme.border_marked = theme.fg_urgent
 -- Taglist
 theme.taglist_bg_empty = theme.bg_normal
 theme.taglist_bg_occupied = "#ffffff1a"
-theme.taglist_bg_urgent =  "#aaffcc4f"
-theme.taglist_bg_focus =  "#aaccff4f"
+theme.taglist_bg_urgent = "#aaffcc4f"
+theme.taglist_bg_focus = "#aaccff4f"
 
 -- Tasklist
 theme.tasklist_font = theme.font
 
 theme.tasklist_bg_normal = "#ffffff18"
-theme.tasklist_bg_focus =  "#ffffff1d"
+theme.tasklist_bg_focus = "#ffffff1d"
 theme.tasklist_bg_urgent = "ffffff24"
 
 theme.tasklist_fg_focus = theme.fg_focus
@@ -84,7 +80,6 @@ theme.systray_icon_spacing = dpi(23)
 
 -- Titlebars
 theme.titlebars_enabled = false
-
 
 -- ===================================================================
 -- Icons

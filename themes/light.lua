@@ -1,4 +1,3 @@
-
 -- -----------------------------------------------------------------------------
 -- Initialization
 -- -----------------------------------------------------------------------------
@@ -17,7 +16,7 @@ theme.name = "light"
 
 -- Font
 theme.font = "Work Sans 10"
-theme.title_font =  "Work Sans Medium 10"
+theme.title_font = "Work Sans Medium 10"
 
 -- Background
 theme.bg_normal = "#efefef00"
