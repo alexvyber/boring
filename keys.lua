@@ -143,20 +143,20 @@ keys.globalkeys = gears.table.join(
 	-- SPAWN APPLICATION KEY BINDINGS
 	-- =========================================
 
-	-- Spawn Vivaldi
-	awful.key({ modkey }, "v", function()
-		awful.spawn(apps.vivaldi)
-	end, { description = "open a terminal", group = "launcher" }),
+	-- -- Spawn Vivaldi
+	-- awful.key({ modkey }, "v", function()
+	-- 	awful.spawn(apps.vivaldi)
+	-- end, { description = "open a terminal", group = "launcher" }),
 
-	-- Spawn Chromium Browser
-	awful.key({ modkey }, "c", function()
-		awful.spawn(apps.chromium)
-	end, { description = "open a terminal", group = "launcher" }),
+	-- -- Spawn Chromium Browser
+	-- awful.key({ modkey }, "c", function()
+	-- 	awful.spawn(apps.chromium)
+	-- end, { description = "open a terminal", group = "launcher" }),
 
-	-- Spawn Brave Browser
-	awful.key({ modkey }, "b", function()
-		awful.spawn(apps.brave)
-	end, { description = "open a terminal", group = "launcher" }),
+	-- -- Spawn Brave Browser
+	-- awful.key({ modkey }, "b", function()
+	-- 	awful.spawn(apps.brave)
+	-- end, { description = "open a terminal", group = "launcher" }),
 
 	-- Spawn terminal
 	awful.key({ modkey }, "Return", function()

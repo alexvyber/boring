@@ -33,6 +33,7 @@ apps = {
 	vivaldi = "vivaldi",
 	brave = "brave-browser",
 	chromium = "chromium-browser",
+	chrome = "google-chrome",
 	edge = "microsoft-edge-stable",
 	tg = "telegram-desktop",
 }
