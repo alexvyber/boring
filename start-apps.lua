@@ -8,7 +8,7 @@ local apps_to_start = {
 	-- "firefox",
 	"tg",
 	"qbittorrent",
-	"telegram-desktop",
+	-- "telegram-desktop",
 	"Discord",
 	"blueman-manager",
 	"dolphin",
