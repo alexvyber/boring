@@ -324,22 +324,22 @@ keys.globalkeys = gears.table.join(
 		raise_client()
 	end, { description = "focus up", group = "client" }),
 
-	awful.key({ modkey }, "Left", function()
+	awful.key({ modkey }, "bracketleft", function()
 		awful.client.focus.bydirection("left")
 		raise_client()
 	end, { description = "focus left", group = "client" }),
 
-	awful.key({ modkey }, "Right", function()
+	awful.key({ modkey }, "bracketright", function()
 		awful.client.focus.bydirection("right")
 		raise_client()
 	end, { description = "focus right", group = "client" }),
 
 	-- TODO: blalalalal
-	awful.key({ modkey }, "bracketright", function()
+	awful.key({ modkey }, "backslash", function()
 		awful.tag.viewnext()
 	end, { description = "focus next by index", group = "client" }),
 
-	awful.key({ modkey }, "bracketleft", function()
+	awful.key({ modkey }, "apostrophe", function()
 		awful.tag.viewprev()
 	end, { description = "focus previous by index", group = "client" }),
 
