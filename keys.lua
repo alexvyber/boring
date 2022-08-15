@@ -324,6 +324,17 @@ keys.globalkeys = gears.table.join(
 		raise_client()
 	end, { description = "focus up", group = "client" }),
 
+
+	awful.key({ modkey }, "Left", function()
+		awful.client.focus.bydirection("left")
+		raise_client()
+	end, { description = "focus left", group = "client" }),
+
+	awful.key({ modkey }, "Right", function()
+		awful.client.focus.bydirection("right")
+		raise_client()
+	end, { description = "focus right", group = "client" }),
+
 	awful.key({ modkey }, "bracketleft", function()
 		awful.client.focus.bydirection("left")
 		raise_client()
