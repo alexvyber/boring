@@ -11,6 +11,7 @@ local apps_to_start = {
 	-- "telegram-desktop",
 	-- "Discord",
 	"blueman-manager",
+	"whatsapp-for-linux",
 	"dolphin",
 }
 
