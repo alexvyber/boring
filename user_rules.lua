@@ -1,5 +1,6 @@
 return {
 	postman = { rule = { instance = "postman" }, properties = { tag = "2" } },
+	vscode = { rule = { instance = "code" }, properties = { tag = "2" } },
 	brave = { rule = { instance = "brave-browser" }, properties = { tag = "4" } },
 	firefox = { rule = { class = "firefox" }, properties = { tag = "11" } },
 	vivaldi = { rule = { instance = "vivaldi" }, properties = { tag = "5" } },
