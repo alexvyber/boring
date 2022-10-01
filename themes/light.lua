@@ -22,7 +22,7 @@ theme.title_font = "Work Sans Medium 10"
 theme.bg_normal = "#efefef00"
 -- theme.bg_normal = "#f00"
 theme.bg_dark = "#000000"
-theme.bg_focus = "#d4f0ff"
+theme.bg_focus = "#ffffff"
 theme.bg_urgent = "#858585"
 theme.bg_minimize = "#bcbcbc"
 

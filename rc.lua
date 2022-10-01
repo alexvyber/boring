@@ -92,6 +92,8 @@ awful.rules.rules = create_rules(keys.clientkeys, keys.clientbuttons)
 
 -- Define layouts
 awful.layout.layouts = {
+	awful.layout.suit.fair.horizontal,
+	awful.layout.suit.fair,
 	awful.layout.suit.tile,
 	awful.layout.suit.floating,
 	awful.layout.suit.max,
