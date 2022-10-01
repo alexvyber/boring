@@ -14,7 +14,7 @@ return {
 	discord = { rule = { instance = "discord" }, properties = { tag = "11" } },
 	nautilus = { rule = { class = "nautilus" }, properties = { tag = "11" } },
 	whatsapp = { rule = { instance = "whatsapp-for-linux" }, properties = { tag = "10" } },
-	telegram = { rule = { instance = "telegram-desktop" }, properties = { tag = "12" } },
+	telegram = { rule = { instance = "telegram" }, properties = { tag = "12" } },
 	qbittorrent = { rule = { instance = "qbittorrent" }, properties = { tag = "13" } },
 	dolphin = { rule = { instance = "dolphin" }, properties = { tag = "14" } },
 	vlc = { rule = { instance = "vlc" }, properties = { tag = "15" } },

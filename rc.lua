@@ -35,7 +35,7 @@ apps = {
 	chromium = "chromium-browser",
 	chrome = "google-chrome",
 	edge = "microsoft-edge-stable",
-	tg = "telegram-desktop",
+	telegram = "telegram",
 }
 
 -- define wireless and ethernet interface names for the network widget
