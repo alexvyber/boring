@@ -277,11 +277,11 @@ keys.globalkeys = gears.table.join(
 		awesome.restart()
 	end, { description = "change theme", group = "awesome" }),
 
-	-- Quit Awesome
-	awful.key({ modkey }, "Escape", function()
-		-- emit signal to show the exit screen
-		awesome.emit_signal("show_exit_screen")
-	end, { description = "toggle exit screen", group = "hotkeys" }),
+	-- -- Quit Awesome
+	-- awful.key({ modkey }, "Escape", function()
+	-- 	-- emit signal to show the exit screen
+	-- 	awesome.emit_signal("show_exit_screen")
+	-- end, { description = "toggle exit screen", group = "hotkeys" }),
 
 	awful.key({}, "XF86PowerOff", function()
 		-- emit signal to show the exit screen
@@ -597,7 +597,7 @@ keys.globalkeys = gears.table.join(
 
 keys.globalkeys = gears.table.join(
 	keys.globalkeys, -- View tag only.
-	awful.key({ modkey }, "#" .. 54, function()
+	awful.key({ modkey }, "#" .. 9, function()
 		local screen = awful.screen.focused()
 		local tag = screen.tags[16]
 		if tag then
@@ -606,7 +606,7 @@ keys.globalkeys = gears.table.join(
 	end, { description = "view tag #" .. 15, group = "tag" }),
 
 	-- Move client to tag
-	awful.key({ modkey, "Shift" }, "#" .. 54, function()
+	awful.key({ modkey, "Shift" }, "#" .. 9, function()
 		if client.focus then
 			local tag = client.focus.screen.tags[16]
 			if tag then
