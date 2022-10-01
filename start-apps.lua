@@ -11,7 +11,7 @@ local apps_to_start = {
 	-- "qbittorrent",
 	"telegram-desktop",
 	"Discord",
-	"postman",
+	-- "postman",
 	"blueman-manager",
 	"whatsapp-for-linux",
 	"dolphin",
