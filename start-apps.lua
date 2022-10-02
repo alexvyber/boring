@@ -9,10 +9,11 @@ local apps_to_start = {
 	-- "firefox",
 	-- "qbittorrent",
 	"telegram",
+	"google-chrome-beta",
 	-- "Discord",
 	-- "postman",
 	"blueman-manager",
-	"whatsapp-for-linux",
+	--[[ "whatsapp-for-linux", ]]
 	"dolphin",
 }
 
