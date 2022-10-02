@@ -29,8 +29,8 @@ local blurred_wallpaper = wallpaper -- wallpaper_dir .. "/blurredWallpaper.png"
 -- local wallpaper = "/home/alexs/Pictures/bg2.jpg"
 -- local blurred_wallpaper =  "/home/alexs/Pictures/bg2.jpg"
 
--- awful.spawn.with_shell("feh --bg-fill " .. wallpaper)
-gears.wallpaper.set(theme.bg_color)
+awful.spawn.with_shell("feh --bg-fill " .. wallpaper)
+--[[ gears.wallpaper.set(theme.bg_color) ]]
 
 --- Check if a file or directory exists in this path
 local function exists(file)
