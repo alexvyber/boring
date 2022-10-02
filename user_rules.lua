@@ -1,11 +1,12 @@
 return {
 	postman = { rule = { instance = "postman" }, properties = { tag = "16" } },
 	vscode = { rule = { instance = "code" }, properties = { tag = "2" } },
+	codium = { rule = { instance = "codium" }, properties = { tag = "2" } },
 	brave = { rule = { instance = "brave-browser" }, properties = { tag = "4" } },
 	firefox = { rule = { class = "firefox" }, properties = { tag = "11" } },
 	vivaldi = { rule = { instance = "vivaldi" }, properties = { tag = "5" } },
 	chromium = { rule = { instance = "chromium-browser" }, properties = { tag = "3" } },
-	chrome = { rule = { instance = "google-chrome" }, properties = { tag = "16" } },
+	chrome = { rule = { instance = "google-chrome" }, properties = { tag = "3" } },
 	edge_dev = { rule = { instance = "microsoft-edge-dev" }, properties = { tag = "12" } },
 	edge_stable = { rule = { instance = "microsoft-edge-stable" }, properties = { tag = "5" } },
 	blue = { rule = { instance = "blueman-manager" }, properties = { tag = "6" } },
