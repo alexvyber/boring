@@ -226,6 +226,11 @@ keys.globalkeys = gears.table.join(
 		awful.util.spawn(apps.screenshot, false)
 	end),
 
+	-- Screenshot on prtscn using scrot
+	awful.key({ modkey }, "s", function()
+		awful.util.spawn(apps.screenarea, false)
+	end),
+
 	-- =========================================
 	-- RELOAD / QUIT AWESOME
 	-- =========================================
