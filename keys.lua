@@ -226,11 +226,16 @@ keys.globalkeys = gears.table.join(
 		awful.util.spawn(apps.screenshot, false)
 	end),
 
-	-- Screenshot on prtscn using scrot
+	-- Screenshot on prtscn using scrot with selecting area
 	awful.key({ modkey }, "s", function()
 		awful.util.spawn(apps.screenarea, false)
 	end),
 
+	-- Screenshot on prtscn using scrot
+	-- select area and copy into clipboard
+	awful.key({ modkey, "Shift" }, "s", function()
+		awful.util.spawn(apps.screenbuffer, false)
+	end),
 	-- =========================================
 	-- RELOAD / QUIT AWESOME
 	-- =========================================

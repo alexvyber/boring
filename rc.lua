@@ -30,6 +30,7 @@ apps = {
 	lock = "i3lock",
 	screenshot = "scrot -e 'mv $f ~/tmp/Pictures/scrot 2>/dev/null'",
 	screenarea = "scrot -s -e 'mv $f ~/tmp/Pictures/scrot 2>/dev/null'",
+	screenbuffer = "scrot -s -e 'xclip -selection clipboard -t image/png -i $f'",
 	filebrowser = "dolphin",
 	vivaldi = "vivaldi",
 	brave = "brave-browser",
