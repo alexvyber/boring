@@ -1,5 +1,6 @@
 return {
 	postman = { rule = { instance = "postman" }, properties = { tag = "16" } },
+	pgadmin4 = { rule = { instance = "pgadmin4" }, properties = { tag = "7" } },
 	vscode = { rule = { instance = "code" }, properties = { tag = "2" } },
 	codium = { rule = { instance = "codium" }, properties = { tag = "2" } },
 	brave = { rule = { instance = "brave-browser" }, properties = { tag = "4" } },
