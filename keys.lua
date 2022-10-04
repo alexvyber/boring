@@ -1,9 +1,3 @@
---      ██╗  ██╗███████╗██╗   ██╗███████╗
---      ██║ ██╔╝██╔════╝╚██╗ ██╔╝██╔════╝
---      █████╔╝ █████╗   ╚████╔╝ ███████╗
---      ██╔═██╗ ██╔══╝    ╚██╔╝  ╚════██║
---      ██║  ██╗███████╗   ██║   ███████║
---      ╚═╝  ╚═╝╚══════╝   ╚═╝   ╚══════╝
 
 -- ===================================================================
 -- Initialization
@@ -75,7 +69,7 @@ end
 
 -- Resize client in given direction
 local floating_resize_amount = dpi(20)
-local tiling_resize_factor = 0.05
+local tiling_resize_factor = 0.03
 
 local function resize_client(c, direction)
 	if awful.layout.get(mouse.screen) == awful.layout.suit.floating or (c and c.floating) then
@@ -142,21 +136,6 @@ keys.globalkeys = gears.table.join(
 	-- =========================================
 	-- SPAWN APPLICATION KEY BINDINGS
 	-- =========================================
-
-	-- -- Spawn Vivaldi
-	-- awful.key({ modkey }, "v", function()
-	-- 	awful.spawn(apps.vivaldi)
-	-- end, { description = "open a terminal", group = "launcher" }),
-
-	-- -- Spawn Chromium Browser
-	-- awful.key({ modkey }, "c", function()
-	-- 	awful.spawn(apps.chromium)
-	-- end, { description = "open a terminal", group = "launcher" }),
-
-	-- -- Spawn Brave Browser
-	-- awful.key({ modkey }, "b", function()
-	-- 	awful.spawn(apps.brave)
-	-- end, { description = "open a terminal", group = "launcher" }),
 
 	-- Spawn terminal
 	awful.key({ modkey }, "Return", function()
@@ -257,41 +236,30 @@ keys.globalkeys = gears.table.join(
 	end, { description = "toggle left panel", group = "awesome" }),
 
 	-- Change Theme
-	awful.key({ modkey }, "t", function()
-		local local_theme = require("theme")
-
-		if local_theme == "dark" then
-			awful.spawn.with_shell("echo 'return \"light\"' > ~/.config/awesome/theme.lua")
-			local_theme = "light"
-		else
-			local_theme = "dark"
-			awful.spawn.with_shell("echo 'return \"dark\"'  > ~/.config/awesome/theme.lua")
-		end
-
-		-- Change awesome theme
-		-- nvim takes dark or light bg from this file too
-
-		-- Change kitty theme
-		awful.spawn.with_shell(
-			"ln -sf  ~/.config/kitty/kitty-themes/themes/" .. local_theme .. ".conf ~/.config/kitty/theme.conf "
-		)
-		-- awful.spawn.with_shell("cp ~/.config/kitty/themex.conf ~/.config/kitty/theme.conf")
-		-- awful.spawn.with_shell("mv ~/.config/kitty/themey.conf ~/.config/kitty/themex.conf")
-
-		-- Change tmux theme
-		awful.spawn.with_shell("ln -sf  ~/dotfiles/dot/dot-tmux." .. local_theme .. ".conf ~/.tmux.theme.conf ")
-		-- awful.spawn.with_shell("cp ~/.tmux.theme.conf ~/.tmux.tmp")
-		-- awful.spawn.with_shell("cp ~/.tmux.sw ~/.tmux.theme.conf")
-		-- awful.spawn.with_shell("mv ~/.tmux.tmp ~/.tmux.sw")
-
-		awesome.restart()
-	end, { description = "change theme", group = "awesome" }),
-
-	-- -- Quit Awesome
-	-- awful.key({ modkey }, "Escape", function()
-	-- 	-- emit signal to show the exit screen
-	-- 	awesome.emit_signal("show_exit_screen")
-	-- end, { description = "toggle exit screen", group = "hotkeys" }),
+	--[[ awful.key({ modkey }, "t", function() ]]
+	--[[ 	local local_theme = require("theme") ]]
+	--[[]]
+	--[[ 	if local_theme == "dark" then ]]
+	--[[ 		awful.spawn.with_shell("echo 'return \"light\"' > ~/.config/awesome/theme.lua") ]]
+	--[[ 		local_theme = "light" ]]
+	--[[ 	else ]]
+	--[[ 		local_theme = "dark" ]]
+	--[[ 		awful.spawn.with_shell("echo 'return \"dark\"'  > ~/.config/awesome/theme.lua") ]]
+	--[[ 	end ]]
+	--[[]]
+	--[[ 	-- Change awesome theme ]]
+	--[[ 	-- nvim takes dark or light bg from this file too ]]
+	--[[]]
+	--[[ 	-- Change kitty theme ]]
+	--[[ 	awful.spawn.with_shell( ]]
+	--[[ 		"ln -sf  ~/.config/kitty/kitty-themes/themes/" .. local_theme .. ".conf ~/.config/kitty/theme.conf " ]]
+	--[[ 	) ]]
+	--[[]]
+	--[[ 	-- Change tmux theme ]]
+	--[[ 	awful.spawn.with_shell("ln -sf  ~/dotfiles/dot/dot-tmux." .. local_theme .. ".conf ~/.tmux.theme.conf ") ]]
+	--[[]]
+	--[[ 	awesome.restart() ]]
+	--[[ end, { description = "change theme", group = "awesome" }), ]]
 
 	awful.key({}, "XF86PowerOff", function()
 		-- emit signal to show the exit screen
@@ -334,7 +302,6 @@ keys.globalkeys = gears.table.join(
 		raise_client()
 	end, { description = "focus up", group = "client" }),
 
-
 	awful.key({ modkey }, "Left", function()
 		awful.client.focus.bydirection("left")
 		raise_client()
@@ -355,7 +322,7 @@ keys.globalkeys = gears.table.join(
 		raise_client()
 	end, { description = "focus right", group = "client" }),
 
-	-- TODO: blalalalal
+	-- TODO: Check it later
 	awful.key({ modkey }, "backslash", function()
 		awful.tag.viewnext()
 	end, { description = "focus next by index", group = "client" }),
@@ -376,11 +343,6 @@ keys.globalkeys = gears.table.join(
 	-- =========================================
 	-- SCREEN FOCUSING
 	-- =========================================
-
-	-- Focus screen by index (cycle through screens)
-	awful.key({ modkey }, "s", function()
-		awful.screen.focus_relative(1)
-	end),
 
 	-- =========================================
 	-- CLIENT RESIZING
@@ -558,8 +520,8 @@ keys.clientkeys = gears.table.join(
 	end, { description = "(un)maximize", group = "client" })
 )
 
--- Bind all key numbers to tags
-for i = 1, 13 do
+--[[ Bind all key numbers to tags ]]
+for i = 1, 5 do
 	keys.globalkeys = gears.table.join(
 		keys.globalkeys,
 
@@ -583,6 +545,81 @@ for i = 1, 13 do
 		end, { description = "move focused client to tag #" .. i, group = "tag" })
 	)
 end
+
+--[[ Bind all key numbers to tags ]]
+for i = 7, 13 do
+	keys.globalkeys = gears.table.join(
+		keys.globalkeys,
+
+		-- Switch to tag
+		awful.key({ modkey }, "#" .. i + 9, function()
+			local screen = awful.screen.focused()
+			local tag = screen.tags[i + 1]
+			if tag then
+				tag:view_only()
+			end
+		end, { description = "view tag #" .. i, group = "tag" }),
+
+		-- Move client to tag
+		awful.key({ modkey, "Shift" }, "#" .. i + 9, function()
+			if client.focus then
+				local tag = client.focus.screen.tags[i + 1]
+				if tag then
+					client.focus:move_to_tag(tag)
+				end
+			end
+		end, { description = "move focused client to tag #" .. i, group = "tag" })
+	)
+end
+
+
+--[[ Postgres Tag ]]
+	keys.globalkeys = gears.table.join(
+		keys.globalkeys,
+
+		-- Switch to tag
+		awful.key({ modkey }, "#" .. 55, function()
+			local screen = awful.screen.focused()
+			local tag = screen.tags[7]
+			if tag then
+				tag:view_only()
+			end
+		end, { description = "view tag #" .. 7, group = "tag" }),
+
+		-- Move client to tag
+		awful.key({ modkey, "Shift" }, "#" .. 55, function()
+			if client.focus then
+				local tag = client.focus.screen.tags[7]
+				if tag then
+					client.focus:move_to_tag(tag)
+				end
+			end
+		end, { description = "move focused client to tag #" .. 7, group = "tag" })
+	)
+
+--[[ Obs Tag ]]
+	keys.globalkeys = gears.table.join(
+		keys.globalkeys,
+
+		-- Switch to tag
+		awful.key({ modkey }, "#" .. 54, function()
+			local screen = awful.screen.focused()
+			local tag = screen.tags[8]
+			if tag then
+				tag:view_only()
+			end
+		end, { description = "view tag #" .. 8, group = "tag" }),
+
+		-- Move client to tag
+		awful.key({ modkey, "Shift" }, "#" .. 54, function()
+			if client.focus then
+				local tag = client.focus.screen.tags[8]
+				if tag then
+					client.focus:move_to_tag(tag)
+				end
+			end
+		end, { description = "move focused client to tag #" .. 8, group = "tag" })
+	)
 
 keys.globalkeys = gears.table.join(
 	keys.globalkeys, -- View tag only.
