@@ -709,6 +709,28 @@ keys.globalkeys = gears.table.join(
 )
 
 
+--[[ Kitty Terminal]]
+keys.globalkeys = gears.table.join(
+	keys.globalkeys, -- View tag only.
+	awful.key({ modkey }, "#" .. 66, function()
+		local screen = awful.screen.focused()
+		local tag = screen.tags[9]
+		if tag then
+			tag:view_only()
+		end
+	end, { description = "view tag #" .. 9, group = "tag" }),
+
+	-- Move client to tag
+	awful.key({ modkey, "Shift" }, "#" .. 66, function()
+		if client.focus then
+			local tag = client.focus.screen.tags[9]
+			if tag then
+				client.focus:move_to_tag(tag)
+			end
+		end
+	end, { description = "move focused client to tag #" .. 9, group = "tag" })
+)
+
 --[[ Google Chrome ]]
 keys.globalkeys = gears.table.join(
 	keys.globalkeys, -- View tag only.

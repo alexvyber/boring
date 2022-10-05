@@ -9,6 +9,7 @@ return {
 	chromium = { rule = { instance = "chromium-browser" }, properties = { tag = "3" } },
 	chrome = { rule = { instance = "google-chrome" }, properties = { tag = "17" } },
 	--[[ github = { rule = { instance = "github" }, properties = { tag = "8" } }, ]]
+	kitty = { rule = { instance = "kitty" }, properties = { tag = "9" } },
 	chrome_beta = { rule = { instance = "google-chrome-beta" }, properties = { tag = "10" } },
 	edge_dev = { rule = { instance = "microsoft-edge-dev" }, properties = { tag = "12" } },
 	edge_stable = { rule = { instance = "microsoft-edge-stable" }, properties = { tag = "5" } },
