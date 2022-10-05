@@ -731,6 +731,27 @@ keys.globalkeys = gears.table.join(
 	end, { description = "move focused client to tag #" .. 9, group = "tag" })
 )
 
+--[[ Node ]]
+keys.globalkeys = gears.table.join(
+	keys.globalkeys, -- View tag only.
+	awful.key({ modkey }, "#" .. 118, function()
+		local screen = awful.screen.focused()
+		local tag = screen.tags[18]
+		if tag then
+			tag:view_only()
+		end
+	end, { description = "view tag #" .. 18, group = "tag" }),
+	-- Move client to tag
+	awful.key({ modkey, "Shift" }, "#" .. 118, function()
+		if client.focus then
+			local tag = client.focus.screen.tags[18]
+			if tag then
+				client.focus:move_to_tag(tag)
+			end
+		end
+	end, { description = "move focused client to tag #" .. 18, group = "tag" })
+)
+
 --[[ Google Chrome ]]
 keys.globalkeys = gears.table.join(
 	keys.globalkeys, -- View tag only.
@@ -741,7 +762,6 @@ keys.globalkeys = gears.table.join(
 			tag:view_only()
 		end
 	end, { description = "view tag #" .. 17, group = "tag" }),
-
 	-- Move client to tag
 	awful.key({ modkey, "Shift" }, "#" .. 67, function()
 		if client.focus then
