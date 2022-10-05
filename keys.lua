@@ -684,6 +684,53 @@ keys.globalkeys = gears.table.join(
 	end, { description = "move focused client to tag #" .. 1, group = "tag" })
 )
 
+
+
+--[[ Telegram ]]
+keys.globalkeys = gears.table.join(
+	keys.globalkeys, -- View tag only.
+	awful.key({ modkey }, "#" .. 28, function()
+		local screen = awful.screen.focused()
+		local tag = screen.tags[12]
+		if tag then
+			tag:view_only()
+		end
+	end, { description = "view tag #" .. 12, group = "tag" }),
+
+	-- Move client to tag
+	awful.key({ modkey, "Shift" }, "#" .. 28, function()
+		if client.focus then
+			local tag = client.focus.screen.tags[12]
+			if tag then
+				client.focus:move_to_tag(tag)
+			end
+		end
+	end, { description = "move focused client to tag #" .. 12, group = "tag" })
+)
+
+
+--[[ Google Chrome ]]
+keys.globalkeys = gears.table.join(
+	keys.globalkeys, -- View tag only.
+	awful.key({ modkey }, "#" .. 67, function()
+		local screen = awful.screen.focused()
+		local tag = screen.tags[17]
+		if tag then
+			tag:view_only()
+		end
+	end, { description = "view tag #" .. 17, group = "tag" }),
+
+	-- Move client to tag
+	awful.key({ modkey, "Shift" }, "#" .. 67, function()
+		if client.focus then
+			local tag = client.focus.screen.tags[17]
+			if tag then
+				client.focus:move_to_tag(tag)
+			end
+		end
+	end, { description = "move focused client to tag #" .. 17, group = "tag" })
+)
+
 keys.globalkeys = gears.table.join(
 	keys.globalkeys, -- View tag only.
 	awful.key({ modkey }, "#" .. 26, function()

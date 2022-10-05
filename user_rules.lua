@@ -7,7 +7,7 @@ return {
 	firefox = { rule = { class = "firefox" }, properties = { tag = "11" } },
 	vivaldi = { rule = { instance = "vivaldi" }, properties = { tag = "5" } },
 	chromium = { rule = { instance = "chromium-browser" }, properties = { tag = "3" } },
-	chrome = { rule = { instance = "google-chrome" }, properties = { tag = "3" } },
+	chrome = { rule = { instance = "google-chrome" }, properties = { tag = "17" } },
 	--[[ github = { rule = { instance = "github" }, properties = { tag = "8" } }, ]]
 	chrome_beta = { rule = { instance = "google-chrome-beta" }, properties = { tag = "10" } },
 	edge_dev = { rule = { instance = "microsoft-edge-dev" }, properties = { tag = "12" } },
