@@ -142,6 +142,16 @@ keys.globalkeys = gears.table.join(
 		awful.spawn(apps.altterminal)
 	end, { description = "open a terminal", group = "launcher" }),
 
+	-- Spawn Nautilus
+	awful.key({ modkey }, "Delete", function()
+		awful.spawn(apps.filebrowser)
+	end, { description = "open file browser", group = "launcher" }),
+
+	-- Spawn Dolphin on its tag
+	awful.key({ modkey, "Shift" }, "Delete", function()
+		awful.spawn(apps.static_filebrowser)
+	end, { description = "open file browser", group = "launcher" }),
+
 	-- Spawn alternative terminal
 	awful.key({ modkey, "Shift" }, "Return", function()
 		awful.spawn(apps.terminal)
