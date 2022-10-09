@@ -153,7 +153,7 @@ keys.globalkeys = gears.table.join(
 	end, { description = "open file browser", group = "launcher" }),
 
 	-- Spawn second alternative terminal
-	awful.key({ modkey, "Shift", "Control" }, "Return", function()
+	awful.key({ modkey, "Control" }, "Return", function()
 		awful.spawn(apps.onemoreterminal)
 	end, { description = "open a terminal", group = "launcher" }),
 
