@@ -26,6 +26,7 @@ apps = {
 	power_manager = "", -- recommended: xfce4-power-manager
 	terminal = "kitty",
 	altterminal = "alacritty",
+	onemoreterminal = "konsole",
 	launcher = "rofi -normal-window -modi drun -show drun -theme " .. theme_config_dir .. "rofi.rasi",
 	--[[ lock = "i3lock", ]]
 	screenshot = "scrot -e 'mv $f ~/tmp/Pictures/scrot 2>/dev/null'",
