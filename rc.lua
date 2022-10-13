@@ -40,6 +40,7 @@ apps = {
 	chrome = "google-chrome",
 	edge = "microsoft-edge-stable",
 	telegram = "telegram",
+	code = "codium",
 }
 
 -- define wireless and ethernet interface names for the network widget
