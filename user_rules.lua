@@ -24,4 +24,5 @@ return {
 	qbittorrent = { rule = { instance = "qbittorrent" }, properties = { tag = "13" } },
 	dolphin = { rule = { instance = "dolphin" }, properties = { tag = "14" } },
 	vlc = { rule = { instance = "vlc" }, properties = { tag = "15" } },
+	responsive = { rule = { instance = "responsively-app" }, properties = { tag = "17" } },
 }
