@@ -19,7 +19,7 @@ theme.font = "Work Sans 10"
 theme.title_font = "Work Sans Medium 10"
 
 -- Background
-theme.bg_normal = "#00000006"
+theme.bg_normal = "#ffffff00"
 --[[ theme.bg_normal = "#f00" ]]
 theme.bg_dark = "#000000"
 theme.bg_focus = "#ffffff"
@@ -27,7 +27,7 @@ theme.bg_urgent = "#858585"
 theme.bg_minimize = "#bcbcbc"
 
 -- Foreground
-theme.fg_normal = "#444444"
+theme.fg_normal = "#fff"
 theme.fg_focus = "#000000"
 theme.fg_urgent = "#ffffff"
 theme.fg_minimize = "#444444"
@@ -53,14 +53,14 @@ theme.taglist_bg_focus = theme.bg_focus
 -- Tasklist
 theme.tasklist_font = theme.font
 
-theme.tasklist_bg_normal = "#0000001a"
+theme.tasklist_bg_normal = "#00000022"
 theme.tasklist_bg_focus = "#ffffff"
 --[[ theme.tasklist_bg_focus = "#ff0000" ]]
 theme.tasklist_bg_urgent = theme.bg_urgent
 
 theme.tasklist_fg_focus = theme.fg_focus
 theme.tasklist_fg_urgent = theme.fg_urgent
-theme.tasklist_fg_normal = "#00000080"
+theme.tasklist_fg_normal = "#000000"
 
 -- Panel Sizing
 theme.left_panel_width = dpi(50)
