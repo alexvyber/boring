@@ -15,8 +15,9 @@ local theme = {}
 theme.name = "light"
 
 -- Font
-theme.font = "Work Sans 10"
-theme.title_font = "Work Sans Medium 10"
+theme.font = "Work Sans Medium 10"
+--[[ theme.title_font = "JetBrains Mono Bold 12" ]]
+theme.title_font = "Work Sans Bold 12"
 
 -- Background
 theme.bg_normal = "#ffffff00"
