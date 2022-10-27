@@ -1,28 +1,24 @@
 return {
 	postman = { rule = { instance = "postman" }, properties = { tag = "16" } },
-	pgadmin4 = { rule = { instance = "pgadmin4" }, properties = { tag = "7" } },
-	vscode = { rule = { instance = "code" }, properties = { tag = "2" } },
 	codium = { rule = { instance = "codium" }, properties = { tag = "2" } },
 	brave = { rule = { instance = "brave-browser" }, properties = { tag = "4" } },
-	firefox = { rule = { class = "firefox" }, properties = { tag = "11" } },
 	vivaldi = { rule = { instance = "vivaldi" }, properties = { tag = "5" } },
-	chromium = { rule = { instance = "chromium-browser" }, properties = { tag = "3" } },
 	chrome = { rule = { instance = "google-chrome" }, properties = { tag = "17" } },
-	--[[ github = { rule = { instance = "github" }, properties = { tag = "9" } }, ]]
 	obs = { rule = { instance = "obs" }, properties = { tag = "8" } },
-	kitty = { rule = { instance = "kitty" }, properties = { tag = "9" } },
 	chrome_beta = { rule = { instance = "google-chrome-beta" }, properties = { tag = "10" } },
-	edge_dev = { rule = { instance = "microsoft-edge-dev" }, properties = { tag = "12" } },
-	edge_stable = { rule = { instance = "microsoft-edge-stable" }, properties = { tag = "5" } },
-	blue = { rule = { instance = "blueman-manager" }, properties = { tag = "6" } },
-	stacer = { rule = { instance = "stacer" }, properties = { tag = "9" } },
-	slack = { rule = { instance = "slack" }, properties = { tag = "10" } },
-	discord = { rule = { instance = "discord" }, properties = { tag = "11" } },
-	nautilus = { rule = { class = "nautilus" }, properties = { tag = "11" } },
-	whatsapp = { rule = { instance = "whatsapp-for-linux" }, properties = { tag = "10" } },
 	telegram = { rule = { instance = "telegram" }, properties = { tag = "12" } },
 	qbittorrent = { rule = { instance = "qbittorrent" }, properties = { tag = "13" } },
 	dolphin = { rule = { instance = "dolphin" }, properties = { tag = "14" } },
 	vlc = { rule = { instance = "vlc" }, properties = { tag = "15" } },
-	responsive = { rule = { instance = "responsively-app" }, properties = { tag = "17" } },
+	--[[ blue = { rule = { instance = "blueman-manager" }, properties = { tag = "6" } }, ]]
+	--[[ slack = { rule = { instance = "slack" }, properties = { tag = "10" } }, ]]
+	--[[ discord = { rule = { instance = "discord" }, properties = { tag = "11" } }, ]]
+	--[[ nautilus = { rule = { class = "nautilus" }, properties = { tag = "11" } }, ]]
+	--[[ pgadmin4 = { rule = { instance = "pgadmin4" }, properties = { tag = "7" } }, ]]
+	--[[ vscode = { rule = { instance = "code" }, properties = { tag = "2" } }, ]]
+	--[[ firefox = { rule = { class = "firefox" }, properties = { tag = "11" } }, ]]
+	--[[ chromium = { rule = { instance = "chromium-browser" }, properties = { tag = "3" } }, ]]
+	--[[ github = { rule = { instance = "github" }, properties = { tag = "9" } }, ]]
+	--[[ kitty = { rule = { instance = "kitty" }, properties = { tag = "9" } }, ]]
+	--[[ responsive = { rule = { instance = "responsively-app" }, properties = { tag = "17" } }, ]]
 }
