@@ -30,14 +30,13 @@ top_panel.create = function(s)
 		layout = wibox.layout.align.horizontal,
 		{
 			layout = wibox.layout.fixed.horizontal,
-			-- wibox.layout.margin(wibox.widget.systray(), dpi(5), dpi(5), dpi(5), dpi(5)),
-			-- require("widgets.bluetooth"),
-			-- require("widgets.network")(),
-			-- require("widgets.battery"),
-			-- volume_widget {widget_type = 'vertical_bar', device = 'default', bg_color = '#44444400',main_color = '#888'}
-			-- wibox.layout.margin(require("widgets.layout-box"), dpi(2), dpi(2), dpi(2), dpi(2))
+			 --[[ wibox.layout.margin(wibox.widget.systray(), dpi(5), dpi(5), dpi(5), dpi(5)), ]]
+			 --[[ require("widgets.network")(), ]]
+			 --[[ require("widgets.battery"), ]]
+			 --[[ wibox.layout.margin(require("widgets.layout-box"), dpi(2), dpi(2), dpi(2), dpi(2)) ]]
 		},
 		task_list.create(s),
+	  --[[ volume_widget {widget_type = 'vertical_bar', device = 'default', bg_color = '#44444400',main_color = '#888'}, ]]
 		require("widgets.calendar").create(s),
 	})
 
