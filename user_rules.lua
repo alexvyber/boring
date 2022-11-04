@@ -10,6 +10,9 @@ return {
 	qbittorrent = { rule = { instance = "qbittorrent" }, properties = { tag = "13" } },
 	dolphin = { rule = { instance = "dolphin" }, properties = { tag = "14" } },
 	vlc = { rule = { instance = "vlc" }, properties = { tag = "15" } },
+
+
+	mullvad = { rule = { instance = "mullvad" }, properties = { tag = "6" } },
 	--[[ blue = { rule = { instance = "blueman-manager" }, properties = { tag = "6" } }, ]]
 	--[[ slack = { rule = { instance = "slack" }, properties = { tag = "10" } }, ]]
 	--[[ discord = { rule = { instance = "discord" }, properties = { tag = "11" } }, ]]
