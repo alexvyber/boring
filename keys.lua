@@ -173,9 +173,9 @@ keys.globalkeys = gears.table.join(
 	end, { description = "application launcher", group = "launcher" }),
 
 	-- Standart launcher
-	awful.key({ modkey }, "p", function()
-		menubar.show()
-	end, { description = "show the menubar", group = "launcher" }),
+	--[[ awful.key({ modkey }, "p", function() ]]
+	--[[ 	menubar.show() ]]
+	--[[ end, { description = "show the menubar", group = "launcher" }), ]]
 
 	-- =========================================
 	-- FUNCTION KEYS
@@ -818,4 +818,24 @@ keys.globalkeys = gears.table.join(
 -- -- Be careful: we use keycodes to make it work on any keyboard layout.
 -- -- This should map on the top row of your keyboard, usually 1 to 9.
 
+keys.globalkeys = gears.table.join(
+	keys.globalkeys, -- View tag only.
+	awful.key({ modkey }, "p", function()
+		local screen = awful.screen.focused()
+		local tag = screen.tags[7]
+		if tag then
+			tag:view_only()
+		end
+	end, { description = "view tag #" .. 14, group = "tag" }),
+
+	-- Move client to tag
+	awful.key({ modkey, "Shift" }, "p", function()
+		if client.focus then
+			local tag = client.focus.screen.tags[7]
+			if tag then
+				client.focus:move_to_tag(tag)
+			end
+		end
+	end, { description = "move focused client to tag #" .. 1, group = "tag" })
+)
 return keys
