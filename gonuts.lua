@@ -9,6 +9,7 @@ local apps_to_start = {
 	"telegram",
 	"google-chrome-beta",
 	--[[ "Discord", ]]
+	"mullvad",
 	"blueman-manager",
 	"dolphin",
 }
