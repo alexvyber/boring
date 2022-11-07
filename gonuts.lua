@@ -5,7 +5,7 @@ local apps_to_start = {
 	"chromium-browser",
 	"brave-browser",
 	"google-chrome",
-	--[[ "qbittorrent", ]]
+	"qbittorrent",
 	"telegram",
 	"google-chrome-beta",
 	--[[ "Discord", ]]
