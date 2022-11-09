@@ -13,6 +13,7 @@ return {
 	vlc = { rule = { instance = "vlc" }, properties = { tag = "15" } },
 	pgadmin4 = { rule = { instance = "pgadmin4" }, properties = { tag = "7" } },
 	mullvad = { rule = { instance = "mullvad" }, properties = { tag = "6" } },
+	gh = { rule = { instance = "github" }, properties = { tag = "9" } },
 
 
 	--[[ blue = { rule = { instance = "blueman-manager" }, properties = { tag = "6" } }, ]]

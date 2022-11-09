@@ -1,10 +1,11 @@
 local awful = require("awful")
 
 local apps_to_start = {
-	"codium",
-	"postman",
-	"pgadmin",
-	"google-chrome",
+	--[[ "codium", ]]
+	--[[ "postman", ]]
+	--[[ "pgadmin", ]]
+	--[[ "google-chrome", ]]
+	"github-desktop",
 }
 
 function start_apps(apps_to_start)
