@@ -1,4 +1,3 @@
-
 -- ===================================================================
 -- Initialization
 -- ===================================================================
@@ -132,6 +131,9 @@ keys.clientbuttons = gears.table.join(
 -- ===================================================================
 
 keys.globalkeys = gears.table.join(
+
+	-- Go to previous tag
+	awful.key({ modkey }, "Tab", awful.tag.history.restore),
 
 	-- =========================================
 	-- SPAWN APPLICATION KEY BINDINGS
@@ -485,6 +487,11 @@ keys.globalkeys = gears.table.join(
 -- ===================================================================
 
 keys.clientkeys = gears.table.join(
+
+	awful.key({ modkey }, "b", function(c)
+		c.sticky = not c.sticky
+	end),
+
 	-- Move to edge or swap by direction
 	awful.key({ modkey, "Shift" }, "Down", function(c)
 		move_client(c, "down")
@@ -592,54 +599,53 @@ for i = 7, 13 do
 	)
 end
 
-
 --[[ Postgres Tag ]]
-	keys.globalkeys = gears.table.join(
-		keys.globalkeys,
+keys.globalkeys = gears.table.join(
+	keys.globalkeys,
 
-		-- Switch to tag
-		awful.key({ modkey }, "#" .. 55, function()
-			local screen = awful.screen.focused()
-			local tag = screen.tags[7]
+	-- Switch to tag
+	awful.key({ modkey }, "#" .. 55, function()
+		local screen = awful.screen.focused()
+		local tag = screen.tags[7]
+		if tag then
+			tag:view_only()
+		end
+	end, { description = "view tag #" .. 7, group = "tag" }),
+
+	-- Move client to tag
+	awful.key({ modkey, "Shift" }, "#" .. 55, function()
+		if client.focus then
+			local tag = client.focus.screen.tags[7]
 			if tag then
-				tag:view_only()
+				client.focus:move_to_tag(tag)
 			end
-		end, { description = "view tag #" .. 7, group = "tag" }),
-
-		-- Move client to tag
-		awful.key({ modkey, "Shift" }, "#" .. 55, function()
-			if client.focus then
-				local tag = client.focus.screen.tags[7]
-				if tag then
-					client.focus:move_to_tag(tag)
-				end
-			end
-		end, { description = "move focused client to tag #" .. 7, group = "tag" })
-	)
+		end
+	end, { description = "move focused client to tag #" .. 7, group = "tag" })
+)
 
 --[[ Obs Tag ]]
-	keys.globalkeys = gears.table.join(
-		keys.globalkeys,
+keys.globalkeys = gears.table.join(
+	keys.globalkeys,
 
-		-- Switch to tag
-		awful.key({ modkey }, "#" .. 54, function()
-			local screen = awful.screen.focused()
-			local tag = screen.tags[8]
+	-- Switch to tag
+	awful.key({ modkey }, "#" .. 54, function()
+		local screen = awful.screen.focused()
+		local tag = screen.tags[8]
+		if tag then
+			tag:view_only()
+		end
+	end, { description = "view tag #" .. 8, group = "tag" }),
+
+	-- Move client to tag
+	awful.key({ modkey, "Shift" }, "#" .. 54, function()
+		if client.focus then
+			local tag = client.focus.screen.tags[8]
 			if tag then
-				tag:view_only()
+				client.focus:move_to_tag(tag)
 			end
-		end, { description = "view tag #" .. 8, group = "tag" }),
-
-		-- Move client to tag
-		awful.key({ modkey, "Shift" }, "#" .. 54, function()
-			if client.focus then
-				local tag = client.focus.screen.tags[8]
-				if tag then
-					client.focus:move_to_tag(tag)
-				end
-			end
-		end, { description = "move focused client to tag #" .. 8, group = "tag" })
-	)
+		end
+	end, { description = "move focused client to tag #" .. 8, group = "tag" })
+)
 
 keys.globalkeys = gears.table.join(
 	keys.globalkeys, -- View tag only.
@@ -704,8 +710,6 @@ keys.globalkeys = gears.table.join(
 	end, { description = "move focused client to tag #" .. 1, group = "tag" })
 )
 
-
-
 --[[ Telegram ]]
 keys.globalkeys = gears.table.join(
 	keys.globalkeys, -- View tag only.
@@ -727,7 +731,6 @@ keys.globalkeys = gears.table.join(
 		end
 	end, { description = "move focused client to tag #" .. 12, group = "tag" })
 )
-
 
 --[[ Kitty Terminal]]
 keys.globalkeys = gears.table.join(
@@ -861,6 +864,5 @@ keys.globalkeys = gears.table.join(
 		end
 	end, { description = "move focused client to tag #" .. 1, group = "tag" })
 )
-
 
 return keys
