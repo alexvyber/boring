@@ -53,7 +53,7 @@ end
 
 -- Resize client in given direction
 local floating_resize_amount = dpi(20)
-local tiling_resize_factor = 0.05
+local tiling_resize_factor = 0.03
 
 local function resize_client(c, direction)
   if awful.layout.get(mouse.screen) == awful.layout.suit.floating or (c and c.floating) then
