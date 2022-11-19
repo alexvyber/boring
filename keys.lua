@@ -220,17 +220,6 @@ keys.globalkeys = gears.table.join(
   -- Reload Awesome
   awful.key({ modkey }, "r", awesome.restart, { description = "reload awesome", group = "awesome" }),
 
-  -- Quit Awesome
-  awful.key({ modkey }, "Escape", function()
-    -- emit signal to show the exit screen
-    awesome.emit_signal("show_exit_screen")
-  end, { description = "toggle exit screen", group = "hotkeys" }),
-
-  awful.key({}, "XF86PowerOff", function()
-    -- emit signal to show the exit screen
-    awesome.emit_signal("show_exit_screen")
-  end, { description = "toggle exit screen", group = "hotkeys" }),
-
   -- + + + + + + + + + + + + + + + + + + + +
   -- CLIENT FOCUSING
   -- + + + + + + + + + + + + + + + + + + + +
@@ -597,26 +586,26 @@ keys.globalkeys = gears.table.join(
   end, { description = "move focused client to tag #" .. 8, group = "tag" })
 )
 
-keys.globalkeys = gears.table.join(
-  keys.globalkeys, -- View tag only.
-  awful.key({ modkey }, "#" .. 25, function()
-    local screen = awful.screen.focused()
-    local tag = screen.tags[10]
-    if tag then
-      tag:view_only()
-    end
-  end, { description = "view tag #" .. 15, group = "tag" }),
+-- keys.globalkeys = gears.table.join(
+--   keys.globalkeys, -- View tag only.
+--   awful.key({ modkey }, "#" .. 25, function()
+--     local screen = awful.screen.focused()
+--     local tag = screen.tags[10]
+--     if tag then
+--       tag:view_only()
+--     end
+--   end, { description = "view tag #" .. 15, group = "tag" }),
 
-  -- Move client to tag
-  awful.key({ modkey, "Shift" }, "#" .. 25, function()
-    if client.focus then
-      local tag = client.focus.screen.tags[10]
-      if tag then
-        client.focus:move_to_tag(tag)
-      end
-    end
-  end, { description = "move focused client to tag #" .. 1, group = "tag" })
-)
+--   -- Move client to tag
+--   awful.key({ modkey, "Shift" }, "#" .. 25, function()
+--     if client.focus then
+--       local tag = client.focus.screen.tags[10]
+--       if tag then
+--         client.focus:move_to_tag(tag)
+--       end
+--     end
+--   end, { description = "move focused client to tag #" .. 1, group = "tag" })
+-- )
 
 keys.globalkeys = gears.table.join(
   keys.globalkeys, -- View tag only.
@@ -707,7 +696,7 @@ keys.globalkeys = gears.table.join(
 -- Node
 keys.globalkeys = gears.table.join(
   keys.globalkeys, -- View tag only.
-  awful.key({ modkey }, "#" .. 118, function()
+  awful.key({ modkey }, "#" .. 25, function()
     local screen = awful.screen.focused()
     local tag = screen.tags[18]
     if tag then
@@ -715,7 +704,7 @@ keys.globalkeys = gears.table.join(
     end
   end, { description = "view tag #" .. 18, group = "tag" }),
   -- Move client to tag
-  awful.key({ modkey, "Shift" }, "#" .. 118, function()
+  awful.key({ modkey, "Shift" }, "#" .. 25, function()
     if client.focus then
       local tag = client.focus.screen.tags[18]
       if tag then
