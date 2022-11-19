@@ -42,7 +42,7 @@ theme.border_marked = "#0000ff"
 -- Taglist
 theme.taglist_bg_empty = theme.bg_normal
 theme.taglist_bg_occupied = "#00000019"
-theme.taglist_bg_urgent = "#0000002c"
+theme.taglist_bg_urgent = "#00000032"
 theme.taglist_bg_focus = theme.bg_focus
 
 -- Tasklist
