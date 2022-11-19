@@ -5,7 +5,8 @@ return {
 	vivaldi = { rule = { instance = "vivaldi" }, properties = { tag = "5" } },
 	chrome = { rule = { instance = "google-chrome" }, properties = { tag = "17" } },
 	obs = { rule = { instance = "obs" }, properties = { tag = "8" } },
-	chromium = { rule = { instance = "chromium-browser" }, properties = { tag = "3" } },
+	--[[ chromium = { rule = { instance = "chromium-browser" }, properties = { tag = "3" } }, ]]
+	chrome = { rule = { instance = "google-chrome" }, properties = { tag = "3" } },
 	chrome_beta = { rule = { instance = "google-chrome-beta" }, properties = { tag = "10" } },
 	telegram = { rule = { instance = "telegram" }, properties = { tag = "12" } },
 	qbittorrent = { rule = { instance = "qbittorrent" }, properties = { tag = "13" } },
