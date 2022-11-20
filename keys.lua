@@ -129,6 +129,11 @@ keys.globalkeys = gears.table.join(
     awful.spawn(apps.terminal)
   end, { description = "open a terminal", group = "launcher" }),
 
+  -- Spawn alternative terminal
+  awful.key({ modkey, "Shift" }, "Return", function()
+    awful.spawn(apps.altterminal)
+  end, { description = "open a terminal", group = "launcher" }),
+
   -- launch rofi
   awful.key({ modkey }, "d", function()
     awful.spawn(apps.launcher)
@@ -152,6 +157,11 @@ keys.globalkeys = gears.table.join(
   -- Spawn second alternative terminal
   awful.key({ modkey, "Mod1" }, "Return", function()
     awful.spawn(apps.onemoreterminal)
+  end, { description = "open a terminal", group = "launcher" }),
+
+  -- Spawn chrome
+  awful.key({ modkey }, "Menu", function()
+    awful.spawn(apps.chrome)
   end, { description = "open a terminal", group = "launcher" }),
 
   -- + + + + + + + + + + + + + + + + + + + +
