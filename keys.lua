@@ -332,11 +332,11 @@ keys.globalkeys = gears.table.join(
     resize_client(client.focus, "right")
   end),
 
-  awful.key({ modkey, "Shift" }, "bracketleft", function(c)
+  awful.key({ modkey, "Control" }, "bracketleft", function(c)
     resize_client(client.focus, "left")
   end),
 
-  awful.key({ modkey, "Shift" }, "bracketright", function(c)
+  awful.key({ modkey, "Control" }, "bracketright", function(c)
     resize_client(client.focus, "right")
   end),
 
@@ -440,11 +440,21 @@ keys.clientkeys = gears.table.join(
     move_client(c, "up")
   end),
 
+  -- Move client left
   awful.key({ modkey, "Shift" }, "Left", function(c)
     move_client(c, "left")
   end),
 
+  awful.key({ modkey, "Shift" }, "bracketleft", function(c)
+    move_client(c, "left")
+  end),
+
+  -- Move client right
   awful.key({ modkey, "Shift" }, "Right", function(c)
+    move_client(c, "right")
+  end),
+
+  awful.key({ modkey, "Shift" }, "bracketright", function(c)
     move_client(c, "right")
   end),
 
