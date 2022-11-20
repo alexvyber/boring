@@ -15,7 +15,7 @@ return {
   mullvad = { rule = { instance = "mullvad" }, properties = { tag = "6" } },
   gh = { rule = { instance = "github" }, properties = { tag = "9" } },
 
-  -- chromium = { rule = { instance = "chromium-browser" }, properties = { tag = "3" } },
+  chromium = { rule = { instance = "chromium-browser" }, properties = { tag = "18" } },
   -- blue = { rule = { instance = "blueman-manager" }, properties = { tag = "6" } },
   -- slack = { rule = { instance = "slack" }, properties = { tag = "10" } },
   -- discord = { rule = { instance = "discord" }, properties = { tag = "11" } },
