@@ -1,6 +1,7 @@
 return {
   postman = { rule = { instance = "postman" }, properties = { tag = "16" } },
   codium = { rule = { instance = "codium" }, properties = { tag = "2" } },
+  code = { rule = { instance = "code" }, properties = { tag = "2" } },
   brave = { rule = { instance = "brave-browser" }, properties = { tag = "4" } },
   vivaldi = { rule = { instance = "vivaldi" }, properties = { tag = "5" } },
   chrome = { rule = { instance = "google-chrome" }, properties = { tag = "17" } },
