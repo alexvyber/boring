@@ -41,7 +41,7 @@ theme.border_marked = "#0000ff"
 
 -- Taglist
 theme.taglist_bg_empty = theme.bg_normal
-theme.taglist_bg_occupied = "#00000019"
+theme.taglist_bg_occupied = "#00000014"
 theme.taglist_bg_urgent = "#00000032"
 theme.taglist_bg_focus = theme.bg_focus
 
@@ -56,7 +56,7 @@ theme.tasklist_fg_urgent = theme.fg_urgent
 theme.tasklist_fg_normal = "#444444"
 
 -- Panel Sizing
-theme.left_panel_width = dpi(50)
+theme.left_panel_width = dpi(55)
 theme.top_panel_height = dpi(25)
 
 -- Notification Sizing
