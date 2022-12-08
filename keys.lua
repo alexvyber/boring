@@ -160,9 +160,9 @@ keys.globalkeys = gears.table.join(
   end, { description = "open a terminal", group = "launcher" }),
 
   -- Spawn chrome
-  awful.key({ modkey }, "Menu", function()
-    awful.spawn(apps.chrome)
-  end, { description = "open a terminal", group = "launcher" }),
+  --[[ awful.key({ modkey }, "Menu", function() ]]
+  --[[   awful.spawn(apps.chrome) ]]
+  --[[ end, { description = "open a terminal", group = "launcher" }), ]]
 
   -- + + + + + + + + + + + + + + + + + + + +
   -- FUNCTION KEYS
@@ -670,7 +670,7 @@ keys.globalkeys = gears.table.join(
 -- Telegram
 keys.globalkeys = gears.table.join(
   keys.globalkeys, -- View tag only.
-  awful.key({ modkey }, "#" .. 28, function()
+  awful.key({ modkey }, "#" .. 118, function()
     local screen = awful.screen.focused()
     local tag = screen.tags[12]
     if tag then
@@ -679,7 +679,7 @@ keys.globalkeys = gears.table.join(
   end, { description = "view tag #" .. 12, group = "tag" }),
 
   -- Move client to tag
-  awful.key({ modkey, "Shift" }, "#" .. 28, function()
+  awful.key({ modkey, "Shift" }, "#" .. 118, function()
     if client.focus then
       local tag = client.focus.screen.tags[12]
       if tag then
