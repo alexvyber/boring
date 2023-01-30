@@ -19,7 +19,7 @@ return {
   chromium = { rule = { instance = "chromium-browser" }, properties = { tag = "18" } },
   -- blue = { rule = { instance = "blueman-manager" }, properties = { tag = "6" } },
   -- slack = { rule = { instance = "slack" }, properties = { tag = "10" } },
-  -- discord = { rule = { instance = "discord" }, properties = { tag = "11" } },
+  discord = { rule = { instance = "discord" }, properties = { tag = "11" } },
   -- nautilus = { rule = { class = "nautilus" }, properties = { tag = "11" } },
   -- vscode = { rule = { instance = "code" }, properties = { tag = "2" } },
   -- firefox = { rule = { class = "firefox" }, properties = { tag = "11" } },
