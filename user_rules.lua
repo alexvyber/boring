@@ -8,7 +8,7 @@ return {
   obs = { rule = { instance = "obs" }, properties = { tag = "8" } },
   chrome = { rule = { instance = "google-chrome" }, properties = { tag = "3" } },
   chrome_beta = { rule = { instance = "google-chrome-beta" }, properties = { tag = "10" } },
-  telegram = { rule = { instance = "telegram" }, properties = { tag = "12" } },
+  telegram = { rule = { instance = "Telegram" }, properties = { tag = "12" } },
   qbittorrent = { rule = { instance = "qbittorrent" }, properties = { tag = "13" } },
   dolphin = { rule = { instance = "dolphin" }, properties = { tag = "14" } },
   vlc = { rule = { instance = "vlc" }, properties = { tag = "15" } },
