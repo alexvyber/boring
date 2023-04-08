@@ -34,7 +34,7 @@ theme.useless_gap = dpi(2)
 theme.gap_single_client = true
 
 -- Window Borders
-theme.border_width = dpi(2)
+theme.border_width = dpi(0)
 theme.border_normal = "#eeeeee"
 theme.border_focus = "#ff0000"
 theme.border_marked = "#0000ff"
