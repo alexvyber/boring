@@ -629,7 +629,7 @@ keys.globalkeys = gears.table.join(
   keys.globalkeys, -- View tag only.
   awful.key({ modkey }, "#" .. 9, function()
     local screen = awful.screen.focused()
-    local tag = screen.tags[16]
+    local tag = screen.tags[12]
     if tag then
       tag:view_only()
     end
@@ -638,7 +638,7 @@ keys.globalkeys = gears.table.join(
   -- Move client to tag
   awful.key({ modkey, "Shift" }, "#" .. 9, function()
     if client.focus then
-      local tag = client.focus.screen.tags[16]
+      local tag = client.focus.screen.tags[12]
       if tag then
         client.focus:move_to_tag(tag)
       end
