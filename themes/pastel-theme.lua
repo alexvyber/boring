@@ -11,8 +11,8 @@ local theme = {}
 theme.name = "pastel"
 
 -- Font
-theme.font = "Work Sans Medium 10"
-theme.title_font = "Work Sans Bold 12"
+theme.font = "JetBrains Mono Medium 10"
+theme.title_font = "JetBrains Mono Bold 10"
 
 -- Background
 theme.bg_normal = "#ffffff00"
@@ -35,36 +35,36 @@ theme.gap_single_client = true
 
 -- Window Borders
 theme.border_width = dpi(0)
-theme.border_normal = "#eeeeee"
-theme.border_focus = "#ff0000"
-theme.border_marked = "#0000ff"
+theme.border_normal = "#e9e9e9"
+theme.border_focus = "#e9e9e9"
+theme.border_marked = "#e9e9e9"
 
 -- Taglist
 theme.taglist_bg_empty = theme.bg_normal
-theme.taglist_bg_occupied = "#00000014"
-theme.taglist_bg_urgent = "#00000032"
-theme.taglist_bg_focus = theme.bg_focus
+theme.taglist_bg_occupied = "#00000012"
+theme.taglist_bg_focus = "#00000024"
+theme.taglist_bg_urgent = "#00000040"
 
 -- Tasklist
-theme.tasklist_font = theme.font
-theme.tasklist_bg_normal = "#00000022"
-theme.tasklist_bg_focus = "#ffffff"
-theme.tasklist_bg_urgent = theme.bg_urgent
+theme.tasklist_font = "#ffffff90"
+theme.tasklist_bg_normal = "#ffffff14"
+theme.tasklist_bg_focus = "#ffffff40"
+theme.tasklist_bg_urgent = "#ffffff"
 
-theme.tasklist_fg_focus = theme.fg_focus
-theme.tasklist_fg_urgent = theme.fg_urgent
+theme.tasklist_fg_focus = "#444444"
+theme.tasklist_fg_urgent = "#444444"
 theme.tasklist_fg_normal = "#444444"
 
 -- Panel Sizing
-theme.left_panel_width = dpi(55)
-theme.top_panel_height = dpi(25)
+theme.left_panel_width = dpi(42)
+theme.top_panel_height = dpi(20)
 
 -- Notification Sizing
-theme.notification_max_width = dpi(350)
+theme.notification_max_width = dpi(450)
 
 -- System Tray
-theme.bg_systray = theme.bg_normal
-theme.systray_icon_spacing = dpi(23)
+theme.bg_systray = "#cccccc"
+theme.systray_icon_spacing = dpi(20)
 
 -- Titlebars
 theme.titlebars_enabled = false

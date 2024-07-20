@@ -34,6 +34,7 @@ apps = {
   screenshot = "scrot -e 'mv $f ~/tmp/Pictures/scrot 2>/dev/null'",
   launcher = "rofi -normal-window -modi drun -show drun -theme " .. theme_config_dir .. "rofi.rasi",
   screenbuffer = "scrot -s -e 'xclip -selection clipboard -t image/png -i $f && mv $f ~/tmp/Pictures/scrot'",
+  flameshot = "flameshot gui",
 
   -- filebrowsers
   filebrowser = "nautilus",

@@ -221,6 +221,19 @@ keys.globalkeys = gears.table.join(
     awful.util.spawn(apps.screenbuffer, false)
   end),
 
+  awful.key({ modkey, "Shift" }, "f", function()
+    awful.util.spawn(apps.flameshot, false)
+  end),
+
+  awful.key({ modkey }, "o", function()
+    awful.spawn("amixer set Master 50%-", false)
+    awesome.emit_signal("volume_change")
+  end),
+
+  awful.key({ modkey }, "i", function()
+    awful.spawn("amixer set Master 50%+", false)
+    awesome.emit_signal("volume_change")
+  end),
   -- + + + + + + + + + + + + + + + + + + + +
   -- RELOAD / QUIT AWESOME
   -- + + + + + + + + + + + + + + + + + + + +
@@ -737,7 +750,7 @@ keys.globalkeys = gears.table.join(
   keys.globalkeys, -- View tag only.
   awful.key({ modkey }, "#" .. 67, function()
     local screen = awful.screen.focused()
-    local tag = screen.tags[17]
+    local tag = screen.tags[16]
     if tag then
       tag:view_only()
     end
@@ -745,12 +758,12 @@ keys.globalkeys = gears.table.join(
   -- Move client to tag
   awful.key({ modkey, "Shift" }, "#" .. 67, function()
     if client.focus then
-      local tag = client.focus.screen.tags[17]
+      local tag = client.focus.screen.tags[16]
       if tag then
         client.focus:move_to_tag(tag)
       end
     end
-  end, { description = "move focused client to tag #" .. 17, group = "tag" })
+  end, { description = "move focused client to tag #" .. 16, group = "tag" })
 )
 
 keys.globalkeys = gears.table.join(
