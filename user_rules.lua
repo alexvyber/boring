@@ -5,6 +5,7 @@ return {
   brave = { rule = { instance = "brave-browser" }, properties = { tag = "4" } },
 
   obs = { rule = { instance = "obs" }, properties = { tag = "8" } },
+  
   chrome = { rule = { instance = "google-chrome" }, properties = { tag = "3" } },
   chrome_beta = { rule = { instance = "google-chrome-beta" }, properties = { tag = "10" } },
 
@@ -21,6 +22,8 @@ return {
   discord = { rule = { instance = "discord" }, properties = { tag = "10" } },
 
   firefox = { rule = { class = "firefox" }, properties = { tag = "4" } },
+
+  apidog = { rule = { instance = "apidog" }, properties = { tag = "18" } },
 
   -- slack = { rule = { instance = "slack" }, properties = { tag = "10" } },
   -- responsive = { rule = { instance = "responsively-app" }, properties = { tag = "17" } },
